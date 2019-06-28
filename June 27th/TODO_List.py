@@ -1,7 +1,6 @@
 task_list = []
-quit = False
 
-while quit == False:
+while True:
     print("     Press 1 to add a task.")
     print("     Press 2 to delete a task.")
     print("     Press 3 to view the full list.")
