@@ -25,6 +25,8 @@ def things_dodged(count):
     gameDisplay.blit(text, (0,0))
 
 #def asteroids(asteroidx, asteroidy):
+#    asteroid_starty = -60
+#    asteroid_Startx = random.randrange(1,4)
 #    gameDisplay.blit(asteroidImg, (asteroidx, asteroidy))
 
 def background(backgroundx, backgroundy):
@@ -35,15 +37,14 @@ def background2(background2x, background2y):
 
 #class Asteroid(pygame.sprite.Sprite):
 #    def __init__(self, asteroidImg, asteroid_starty, asteroid_startx, asteroid_speedy, asteroid_speedx):
-#        #pygame.sprite.Sprite.__init__(self)
+#        pygame.sprite.Sprite.__init__(self)
 #        self.asteroidImg = pygame.image.load('asteroid-png-flying-16.png')
-#        self.asteroid_starty = -60
-#        self.asteroid_startx = random.randrange(0, display_width)
-#        self.asteroid_speedy = random.randrange(1, 4)
-#        self.asteroid_speedx = random.randrange(-2, 2)
-    
-#    def make_asteroid(self):
-#        gameDisplay.blit(asteroidImg, (asteroid_startx, asteroid_starty))
+#        self.asteroid_starty = ''
+#        self.asteroid_startx = ''
+#        self.asteroid_speedy = ''
+#        self.asteroid_speedx = ''
+#    
+#        gameDisplay.blit(self.asteroidImg, (asteroid_startx, asteroid_starty))
 
 def ship(x,y):
     gameDisplay.blit(spaceshipImg, (x,y))
@@ -85,8 +86,12 @@ def game_loop():
     dodged = 0
 
     gameExit = False
+    #gameOver = False
 
     while not gameExit:
+        #while gameOver == True:
+
+        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -117,6 +122,16 @@ def game_loop():
         
         background2(background2_startx, background2_starty)
         background2_starty += background2_speed
+
+        #asteroid_list = pygame.sprite.Group()
+        #all_sprites_list = pygame.sprite.Group()
+
+        #for i in range(3):
+        #    new_asteroid = Asteroid(asteroidImg, -60, random.randrange(0, display_width), random.randrange(1, 4), random.randrange(-1, 1))
+        #
+        #    asteroid_list.add(new_asteroid)
+        #    all_sprites_list.add(new_asteroid)
+            #gameDisplay.blit(asteroidImg, (random.randrange(0, display_width), -60)
 
         #asteroids(asteroid_startx, asteroid_starty)
         #asteroid_starty += asteroid_speedy
