@@ -27,8 +27,9 @@ def check_out_table():
     print('\n')
     selection = int(input("Enter the number of the table you wish to use [1-12]: "))
     if tables[selection - 1].status == "unoccupied":
+        now = datetime.datetime.now()
         tables[selection - 1].status = "occupied"
-        tables[selection - 1].start_time = datetime.datetime.now()
+        tables[selection - 1].start_time = now.strftime("%m/%d/%Y, %H:%M:%S")
         print(f"You may now use Pool Table #{selection}. Start time: {tables[selection - 1].start_time}")
     else:
         print(f"Sorry, pool Table #{selection} is occupied.")
@@ -37,8 +38,9 @@ def check_in_table():
     print('\n')
     selection = int(input("Enter the number of the table you wish to check in [1-12]: "))
     if tables[selection - 1].status == "occupied":
+        now = datetime.datetime.now()
         tables[selection - 1].status = "unoccupied"
-        tables[selection - 1].end_time = datetime.datetime.now()
+        tables[selection - 1].end_time = now.strftime("%m/%d/%Y, %H:%M:%S")
         calculate_time(tables[selection -1])
         calculate_cost(tables[selection - 1])
         print(f"Thank you for checking in Pool Table #{selection}. End time: {tables[selection - 1].end_time}")
@@ -59,13 +61,13 @@ def main_menu():
     return(choice)
 
 def calculate_time(table):
-    total_hours = int(table.end_time.hour) - int(table.start_time.hour)
-    total_minutes = int(table.end_time.minute) - int(table.start_time.minute)
+    total_hours = int(table.end_time[12:14]) - int(table.start_time[12:14])
+    total_minutes = int(table.end_time[15:17]) - int(table.start_time[15:17])
     table.total_time = (f"Total Hours: {total_hours}, Total Minutes: {total_minutes}")
 
 def calculate_cost(table):
-    total_hours = int(table.end_time.hour) - int(table.start_time.hour)
-    total_minutes = int(table.end_time.minute) - int(table.start_time.minute)
+    total_hours = int(table.end_time[12:14]) - int(table.start_time[12:14])
+    total_minutes = int(table.end_time[15:17]) - int(table.start_time[15:17])
     minutes = 60 * total_hours + total_minutes
     table.cost = 0.10 * float(minutes)
 
