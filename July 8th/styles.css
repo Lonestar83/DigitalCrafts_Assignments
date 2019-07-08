@@ -1,0 +1,32 @@
+.header {
+    background-color:#FF4747;
+    color: white;
+    text-align: center;
+}
+
+.cities {
+    background-color:#788FFF;
+    color: white;
+    text-align: center;
+    list-style: inside;
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+    font-size: 17; 
+}
+
+.featured-image {
+    width: 80%; 
+    height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.footer {
+    background-color:#788FFF;
+    color: white;
+    text-align: center;
+}

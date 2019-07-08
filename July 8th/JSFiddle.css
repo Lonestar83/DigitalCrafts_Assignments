@@ -1,0 +1,17 @@
+body {
+    background-color:#FEFF00;
+}
+
+ul {
+    margin-top: 25px;
+}
+
+li {
+    font-style:italic;
+    font-family: TimesNewRoman, "Times New Roman"; 
+}
+
+li:nth-child(3) {
+    color: black;
+    background-color: #008000;
+ }
