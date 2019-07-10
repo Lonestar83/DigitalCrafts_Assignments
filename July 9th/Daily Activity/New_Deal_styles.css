@@ -1,0 +1,14 @@
+.item {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.deal {
+    height: 25%;
+    width: 25%;
+    margin-top: 125px;
+    z-index: 2;
+    position: absolute;
+}
