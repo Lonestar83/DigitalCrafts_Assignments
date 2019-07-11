@@ -29,8 +29,10 @@
 #menu a {
     color: whitesmoke;
     text-align: center;
+    align-items: center;
     text-decoration: none;
     width: 20%;
+    margin: 9px;
 }
 
 #menu a:hover {
@@ -71,7 +73,8 @@
     }
 
     #men a {
-        float: left;
+        align-items: center;
+        margin: 9px;
         width: 20%;
         font-size: 17px;
     }
@@ -123,5 +126,6 @@
     .car-box {
         width: 99.4%;
         height: 25vh;
+        justify-content: middle;
     }
 }

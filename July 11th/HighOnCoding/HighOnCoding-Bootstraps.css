@@ -1,0 +1,135 @@
+nav {
+    height: 15%;
+    width: 97%;
+    position: relative;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 35px !important;
+    margin-left: 5px !important;
+    margin-bottom: 10px !important;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.nav-link {
+    color: white !important;
+    display: inline-block !important;
+}
+
+.jumbotron {
+    background-color: #DDDEE0;
+    color: #53585E;
+    height: 23%;
+    width: 93%;
+    padding: 0;
+    padding-left: 0;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    padding: 0 !important;
+    margin-left: 15px !important;
+    margin-right: 0 !important;
+    width: 1000px !important;
+}
+
+/*.jumbotron-fluid {
+    padding: 0 !important;
+}*/
+
+.display-4 {
+    font-size: 30px !important;
+    padding-top: 10px !important;
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    height: 20%;
+    width: 93%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+    border-radius: 0;
+    border-color: white !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-title {
+    color: #0265C0 !important; 
+    font-family: Helvetica !important; 
+    font-weight: lighter !important;
+    font-size: 24px !important;
+}
+
+.card-text {
+    padding-inline-start: 0;
+    padding-bottom: 0 !important;
+    font-size: 14.5px !important;
+}
+
+.card-footer {
+    background-color: #F39017 !important;
+    border-color: white !important;
+    border-radius: 0 !important;
+    height: 22%;
+    padding: 0 !important;
+}
+
+.card-box-ul {
+    list-style-type: none;
+    padding-left: 6px !important;
+}
+
+.card-box-li {
+    color: white !important;
+    display: inline-block;
+    padding-right: 5%;
+    padding-left: 0 !important; 
+}
+
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 40px 5px 120px !important;
+}
+
+.box {
+    flex-direction: row;
+    background-color: #DDDEE0;
+    height: 250px !important;
+    width: 300px !important;
+    padding-right: auto;
+    padding-left: auto;
+    margin: 4% 3% 4% 3%;
+    position: relative;
+}
+
+.box-title {
+    text-align: center;
+    padding-top: 100px !important;
+    font-weight: lighter;
+}
+
+.box-text {
+    margin: 0;
+    color: #53585E !important;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 55px !important;
+}
