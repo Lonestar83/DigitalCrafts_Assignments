@@ -1,0 +1,27 @@
+#header {
+    display: grid;
+    height: auto;
+    margin: 5px;
+    background-color: mistyrose;
+}
+
+#menu {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-item {
+    color: crimson;
+    font-size: 5em;
+    justify-items: center;
+}
+
+.menu-item:hover {
+    background-color: lightseagreen;
+    color: brown
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
