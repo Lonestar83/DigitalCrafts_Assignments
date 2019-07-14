@@ -1,0 +1,33 @@
+body {
+    background-image: url(https://cdn.spacetelescope.org/archives/images/screen/heic1112a.jpg);
+}
+
+#banner {
+    background-image: linear-gradient(indigo, #8b0000);
+    border-radius: 10px;
+    color: gold;
+    border: 2px solid gold;
+    text-align: center;
+    font-size: 4em;
+    margin: 10px;
+}
+
+#planets {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.planet {
+    background-image: linear-gradient(to bottom right, mediumvioletred, violet);
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+img {
+    width: 220px;
+    height: 220px;
+    border-radius: 5px;
+}
