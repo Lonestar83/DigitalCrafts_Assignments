@@ -30,12 +30,15 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 350px;
+    transition: 0.25s
 }
 
 .planet:hover {
-    height: 330px;
+    /* height: 330px;
     width: 330px;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 20px; */
+    transform: scale(1.1)
+
 }
 
 img {
@@ -51,8 +54,9 @@ img {
 }
 
 img:hover {
-    margin: 10px 0px 0px 0px;
-    width: 300px;
+    /* margin: 10px 0px 0px 0px;
+    width: 300px; */
+    max-width: 250px;
 }
 
 .planet-name {
