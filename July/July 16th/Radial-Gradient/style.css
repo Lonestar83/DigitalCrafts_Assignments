@@ -1,0 +1,18 @@
+body {
+    background-color: midnightblue;
+}
+
+#gradient-box {
+    display: flex;
+    height: 360px;
+    width: 400px;
+    background: radial-gradient(red 1%, yellow);
+    color: blueviolet;
+    text-align: center;
+    justify-content:center;
+    padding-top: 40px;
+    margin: 20px;
+    font-size: 7em;
+    flex-direction: vertical;
+    text-shadow: 2px 2px black;
+}
