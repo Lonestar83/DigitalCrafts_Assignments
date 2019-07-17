@@ -1,0 +1,81 @@
+body {
+    background-color: white;
+}
+
+#menu {
+    text-align: center;
+    margin: 10px;
+    font-size: 4em;
+    font-family: 'Great Vibes', cursive;
+}
+
+#dishSelector {
+    width: 120px;
+    margin-left: calc(50% - 55px);
+    margin-right: 50%;
+    margin-bottom: 20px;
+}
+
+#dishSelector option {
+    font-size: 5em;
+}
+
+#dishlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dishItem {
+    margin: 10px;
+    display: flex;
+}
+
+.dishInfo {
+    flex-direction: column;
+    padding: 0px 5px 5px 5px;
+}
+
+.dishTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dishName {
+    font-size: 20px;
+    font-family: 'Courgette', cursive;
+}
+
+.description {
+    display: flex;
+    vertical-align: bottom;
+    font-family: 'Vollkorn', serif;
+}
+
+@media only screen and (max-width: 456px) {
+    
+    .dishItem {
+        display: block;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .dishItem img {
+        width: 100%;
+        height: auto;
+    } 
+}
+
+@media only screen and (min-width: 457px) {
+
+    #dishlist {
+        
+    }
+
+    .dishItem {
+        display: flex;
+        height: auto;
+        max-width: 400px;
+    }
+}
