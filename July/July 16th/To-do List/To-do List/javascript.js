@@ -1,5 +1,5 @@
 let addButton = document.getElementById("addButton")
-let taskTextBox = document.getElementById('taskTextBox')
+let taskTextBox = document.getElementById("taskTextBox")
 let pendingTasks = document.getElementById('pendingTasks')
 let completedTasks = document.getElementById('completedTasks')
 
@@ -7,7 +7,7 @@ function clearTaskBar() {
     taskTextBox.value= ""
 }
 
-addButton.addEventListener('click',function() {
+addButton.addEventListener('click', function() {
     let LiElement = document.createElement('li')
     
     let node = document.createElement("span")
