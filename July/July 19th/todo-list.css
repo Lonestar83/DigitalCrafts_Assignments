@@ -1,0 +1,50 @@
+#title {
+    font-size: 4em;
+    text-align: center;
+    margin: 10px 550px 10px 550px;
+    height: auto;
+    border-radius: 0px 5px 0px 5px;
+    background-color: lightblue;
+}
+
+#taskentry {
+    font-size: 2em;
+    text-align: center;
+    margin: 10px 450px 10px 450px;
+    border-radius: 0px 5px 0px 5px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#taskTextBox {
+    height: 2em;
+    font-size: 20px;
+    margin: 0px 10px 0px 10px;
+}
+
+#btnAdd {
+    height: 2em;
+    width: 7em;
+    font-size: 20px;
+}
+
+.taskcategories{
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 450px 20px 450px;
+    border-radius: 0px 5px 0px 5px;
+    background-color: lightblue;
+}
+
+.taskItemBox {
+    font-size: 1em;
+    text-align: center;
+    width: 200px;
+    margin: 30px 450px 20px 450px;
+    border-radius: 0px 5px 0px 5px;
+    background-color: mistyrose;
+    display: flex;
+    justify-content: space-around;
+}
