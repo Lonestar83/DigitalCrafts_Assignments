@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btnColor {
+    text-align: center;
+    font-family: 'Raleyway', sans-serif;
+    font-size: 2em;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#greeting {
+    font-size: 10em;
+    font-family: 'Permanent Marker', cursive;
+    margin-left: auto;
+    margin-right: auto;
+}
