@@ -1,0 +1,8 @@
+.orderInfo {
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 10px 20px;
+}

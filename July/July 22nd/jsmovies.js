@@ -20,7 +20,7 @@ searchButton.addEventListener('click', () => {
     
     let movieItems =  movies.Search.map(movie => {
         return `<div class="movie">
-                    <img src='${movie.Poster ? movie.Poster : "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png"}'></img>
+                    <img src='${movie.Poster == "N/A" ? "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png" : movie.Poster}'></img>
                     <a href="#" onclick='ShowDetails("${movie.imdbID}")'>${movie.Title}</a>
                 </div>`
     })
