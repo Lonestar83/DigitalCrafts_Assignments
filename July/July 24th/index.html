@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <div id="dataEntry">   
+            <h2>Add Store</h2>
+            <input type="text" id="nameTextBox" placeholder="Enter store name"></input>
+            <input type="text" id="addressTextBox" placeholder="Enter store address"></input>
+            <button id="addStoreButton">Add Store</button>
+        </div>
+            <div id="storeList"></div>
+
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+            var firebaseConfig = {
+            apiKey: "AIzaSyAOaP9DXziIlNT8ImLLhRpwkMrS1DWOI6g",
+            authDomain: "grocery-assignment.firebaseapp.com",
+            databaseURL: "https://grocery-assignment.firebaseio.com",
+            projectId: "grocery-assignment",
+            storageBucket: "",
+            messagingSenderId: "424618231896",
+            appId: "1:424618231896:web:06a03c12e2f4a1ce"
+            };
+  // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            var database = firebase.database() 
+        </script>
+        <script src="grocery.js"></script>
+    </body>
+</html>
