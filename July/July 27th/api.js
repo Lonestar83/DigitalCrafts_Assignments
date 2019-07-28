@@ -1,21 +1,15 @@
 let dogImage = document.getElementById("dogImage")
-let dogURL = "https://dog.ceo/api/breeds/image/random"
+let dogButton = document.getElementById("dogButton")
 
-dogImage.addEventListener('load', () => {
+dogButton.addEventListener('click', () => {
 
-    let dogURL = "https://dog.ceo/api/breeds/image/random"
+    let dogURL = `https://dog.ceo/api/breeds/image/random`
     let req = new XMLHttpRequest()
     req.open('GET',dogURL)
     req.addEventListener('load',() => {
     let dog = JSON.parse(event.currentTarget.responseText)
-    
-    let dogItem =  `<img src='${dog}'</img>`
-
-    dogImage.innerHTML = dogItem.join('')
-    
-    console.log(dog)
-
-   
-}) 
+    let dogItem = `<img src='${dog.message}'/>`
+    dogImage.innerHTML = dogItem
+    })
 req.send() 
 })
