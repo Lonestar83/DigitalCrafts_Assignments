@@ -1,4 +1,5 @@
 let database = null;
+let auth = null;
 (function() {
     var firebaseConfig = {
     apiKey: "AIzaSyDN8XKIbmHBoS6b7MvOYDH3bXgf9u9O7zs",
@@ -10,5 +11,14 @@ let database = null;
     appId: "1:203847427175:web:93d335b461b64d84"
     };
     firebase.initializeApp(firebaseConfig);
-    database = firebase.database() 
+    database = firebase.database()
+    auth = firebase.auth()
 }());
+
+auth.onAuthStateChanged(function(firebaseUser){
+    if(firebaseUser) {
+        console.log(firebaseUser);
+    } else {
+        console.log('not logged in')
+    }
+});

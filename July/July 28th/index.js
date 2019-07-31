@@ -1,3 +1,5 @@
+
+
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
@@ -17,11 +19,14 @@ btnLogin.addEventListener('click', x => {
     const email = txtEmail.value;
     const password = txtPassword.value;
     clearTxtBoxes();
-    const auth = firebase.auth();
     //Sign in
-    const promise = auth.signInWithEmailAndPassword(email, password);
-    promise.catch(error => console.log(error.message));
-    window.location.href = "welcomepage.html";
+    const promise = firebase.auth().signInWithEmailAndPassword(email, password);
+    promise
+    .then(() => {
+        window.location.href = "welcomepage.html";
+    })
+    .catch(error => console.log(error.message));
+    
 })
 
 //Add signup event
@@ -30,37 +35,38 @@ btnSignUp.addEventListener('click', x => {
     const email = txtEmail.value;
     const password = txtPassword.value;
     clearTxtBoxes();
-    const auth = firebase.auth();
     //Sign in
-    const promise = auth.createUserWithEmailAndPassword(email, password);
+    const promise = firebase.auth().createUserWithEmailAndPassword(email, password);
     promise
     .then((response) => {
         console.log(response)
-        let uid = response.user.uid
-        saveUser(email, password, uid)
+        let uid = auth.currentUser.uid
+        saveUser(uid)
+        window.location.href = "welcomepage.html";
     })
     .catch(error => {
         alert(error.message)
     });
 })
 
-function saveUser(email, password, id) {
-    let user = new User(email, password, id)
-    usersRef.push(user)
-    .then(res => console.log('user saved'))
-    .catch(error => console.log(error))
+function saveUser(uid) {
+    let user = new User(uid)
+    usersRef.child(uid).set({
+        uid: uid,
+    })
+
+    //usersRef.push(user)
+    //.then(res => console.log('user saved'))
+    //.catch(error => console.log(error))
 }
 
 class User {
-    constructor(email, password, uid) {
-        this.email = email 
-        this.password = password 
+    constructor(uid) {
         this.userId = uid
         this.favorites = [] 
     }
 
     addFavorite(favorite) {
         this.favorites.push(favorite)
-        console.log('favorite added')
     }
 }

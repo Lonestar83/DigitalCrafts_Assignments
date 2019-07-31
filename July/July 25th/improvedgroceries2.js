@@ -67,10 +67,13 @@ function displayStores(stores) {
 function addGrocery(storeId,obj) {
     
     console.log(storeId)
+    //Use userID to find correct node
     let store = stores.find( u => u.storeId == storeId)
 
     let groceryName = obj.previousElementSibling.value
+    //run addGrocery function on that user
     store.addGrocery(new Grocery(groceryName))
+    //Reset the value of store
     storeRef.child(storeId).set(store)
 }
 
