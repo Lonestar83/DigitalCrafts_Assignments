@@ -1,5 +1,4 @@
 let database = null;
-let auth = null;
 (function() {
     var firebaseConfig = {
     apiKey: "AIzaSyDN8XKIbmHBoS6b7MvOYDH3bXgf9u9O7zs",
@@ -15,7 +14,7 @@ let auth = null;
     auth = firebase.auth()
 }());
 
-auth.onAuthStateChanged(function(firebaseUser){
+firebase.auth().onAuthStateChanged(function(firebaseUser){
     if(firebaseUser) {
         console.log(firebaseUser);
     } else {

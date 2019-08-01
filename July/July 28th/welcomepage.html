@@ -1,6 +1,8 @@
 <html>
     <head>
-      
+        <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>  
         <link rel="stylesheet" href="site.css"></link>
     </head>
     <body>
@@ -8,31 +10,7 @@
         <h1>You're signed in!</h1>
         <button id="btnFavorite">&hearts;</button>
         
-        <!-- <script src="auth.js"></script> -->
-       <!-- <script src="auth.js"></script> -->
-
-       <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
-
-       <script>
-            (function() {
-            var firebaseConfig = {
-            apiKey: "AIzaSyDN8XKIbmHBoS6b7MvOYDH3bXgf9u9O7zs",
-            authDomain: "auth-practice-4bf18.firebaseapp.com",
-            databaseURL: "https://auth-practice-4bf18.firebaseio.com",
-            projectId: "auth-practice-4bf18",
-            storageBucket: "auth-practice-4bf18.appspot.com",
-            messagingSenderId: "203847427175",
-            appId: "1:203847427175:web:93d335b461b64d84"
-            };
-           // firebase.initializeApp(firebaseConfig);
-            database = firebase.database()
-            auth = firebase.auth()
-        }());
-                </script>
-
-        <script src="welcomepage.js"></script>
-        
+        <script src="auth.js"></script>
+        <script src="welcomepage.js"></script>   
     </body>
 </html>

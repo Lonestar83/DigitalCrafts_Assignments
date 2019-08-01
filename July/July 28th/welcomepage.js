@@ -3,16 +3,6 @@ const btnFavorite = document.getElementById('btnFavorite')
 
 let usersRef = database.ref('users')
 
-firebase.auth().onAuthStateChanged(function(firebaseUser){
-    if(firebaseUser) {
-        console.log(firebaseUser);
-    } else {
-        console.log('not logged in')
-    }
-});
-
-//Add a realtime listener
-
 btnLogout.addEventListener('click', e => {
     auth.signOut()
     .then(() => {
@@ -24,7 +14,6 @@ btnLogout.addEventListener('click', e => {
 });
 
 let favorites = []
-// 
 
 function changeColor() {
     let heartColor = document.getElementById('btnFavorite').style.color;
@@ -35,7 +24,7 @@ function changeColor() {
     }
 }
 let favoriteRef = null
-//favoritesArray = []
+
 btnFavorite.addEventListener('click', function(){
     let favorite = new Favorite("1234", "Hello", "World", "brian", "www.brian.brian")  
     if(btnFavorite.style.color == "red") {
