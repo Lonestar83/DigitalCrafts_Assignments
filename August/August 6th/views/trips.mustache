@@ -1,13 +1,18 @@
 <html>
+    <script>
+    form {
+        background-color: mistyrose;
+    }
+    </script>
     <body>
         {{#trips}}
             <form action="/delete-trip" method="POST">
                 <div>
-                    <h1>Desitination: {{title}}</h1>
+                    <span style="font-size: 5vw">Desitination: {{title}}</span>
                     <img src="{{image}}"/>
                     <h3>Deparure Date: {{departureDate}}</h3>
                     <h3>Return Date: {{returnDate}}</h3>
-                    <button>Delete</button>
+                    <button style="font-size: 3vw, width: auto">Delete</button>
                     <input type="hidden" name="tripTitle" value="{{title}}"/>
                 </div>
             </form>
