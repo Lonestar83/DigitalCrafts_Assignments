@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/site.css">
+    </head>
+    <body>
+        <header>
+            {{> menu}}
+        </header>
+        <h1>Add Trips</h1>
+        <form action="/trips/add-trip" method="POST">
+            <input type="text" name="tripTitle" placeholder="Trip Title"/>
+            <input type="text" name="imageURL" placeholder="Image url"/>
+            <input type="text" name="departureDate" placeholder="Date of Departure"/>
+            <input type="text" name="returnDate" placeholder="Date of Return"/>
+            <button>Save</button>
+        </form>
+    </body>
+</html>

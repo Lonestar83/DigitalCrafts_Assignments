@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/site.css">
+    </head>
+    <body>
+        <header>
+            {{> menu}}
+        </header>
+        <h1>My Trips</h1>
+        {{#trips}}
+            <form action="/trips/delete-trip" method="POST">
+                {{tripTitle}}
+                <img style="width: 200px" src= "{{imageURL}}" />
+                {{departureDate}}
+                {{returnDate}}
+                <button>Delete</button>
+                <input type="hidden" name="tripTitle" value="{{tripTitle}}"/>
+            </form>
+        {{/trips}}
+    </body>
+</html>

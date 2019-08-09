@@ -1,0 +1,49 @@
+body {
+    background-color: lightgreen;
+}
+
+header {
+    background-color: crimson;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 3vw;
+    margin: 50px;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid yellow;
+    background-color: crimson;
+    color: yellow;
+    font-size: 3vw;
+    margin-top: 10%;
+    margin-right: 50px;
+}
+
+button:hover {
+    background-color: yellow;
+    color: crimson;
+}
+
+h1 {
+    color: crimson;
+    font-size: 10vw;
+    margin: 10px;
+}
+
+img {
+    width: 250px;
+    height: 200px;
+}
+
+input {
+    font-size: 3vw;
+    margin: 20px;
+}
