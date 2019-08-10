@@ -1,5 +1,7 @@
 body {
     background-color: lightgreen;
+    width: 100%;
+    margin: 0% 
 }
 
 header {
@@ -7,7 +9,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5px;
+    margin: 5px 0px 5px 0px;
 }
 
 a {
@@ -46,4 +48,20 @@ img {
 input {
     font-size: 3vw;
     margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+    background-color: crimson;
+    border-radius: 3px;
+    border: 1px solid yellow;
+    margin: 2vw;
+    min-height: 3vw;
+}
+
+li {
+    text-decoration: none;
+    color: yellow;
+    font-size: 3vw;
+    margin: 0.5vw;
 }

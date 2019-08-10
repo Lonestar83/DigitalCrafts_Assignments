@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/site.css">
+    </head>
+    <header>
+            {{> menu}}
+        </header>
+    <body>
+        <ul id="chatMessagesUL"></ul>
+        <input type="text" id="chatMessageTextBox" />
+        <button id="sendButton">Send</button>
+        <input type="hidden" id="usernameHF" value="{{username}}" />
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/client.js"></script>
+    </body>
+</html>

@@ -7,6 +7,19 @@ const session = require('express-session')
 const Trip = require('./models/trips')
 const path = require('path')
 const VIEWS_PATH = path.join(__dirname,'/views')
+const http = require('http').createServer(app)
+
+//This code creates an instance of socket.io
+const io = require('socket.io')(http)
+
+io.on('connection', (socket) => {
+    console.log('You are connected...')
+    socket.on('Trip', (message) => {
+        console.log(message)
+        //This line of code send the message back to the client
+        io.emit('Trip', message)
+    })
+})
 
 //This code initializes sessions.
 app.use(session({
@@ -19,6 +32,7 @@ app.use(session({
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use('/static', express.static(__dirname + '/static'))
+app.use(express.static('public'))
 
 //This line of code keeps users from viewing 'trip' pages without logging in.
 app.all('/trips/*',authenticate)
@@ -31,8 +45,6 @@ app.set('view engine', 'mustache')
 //This code sets up an empty array of users.
 let users = [{username: 'johndoe', password: 'password'}]
 let trips = []
-
-
 
 //This code creates an authentication middleware. 
 function authenticate(req,res,next) {
@@ -127,7 +139,13 @@ app.post('/trips/delete-trip', (req, res) => {
     res.redirect('/trips/my-trips')
 })
 
-//This 
+//This creates a 'chat' page.
+app.get('/trips/chat', (req, res) => {
+    res.render('chat', {username: req.session.username})
+})
+
+
+//This code allows users to logout.
 app.post('/trips/logout',(req,res) => {
     if(req.session) {
         req.session.destroy(error => {
@@ -140,7 +158,12 @@ app.post('/trips/logout',(req,res) => {
     }
 })
 
-//Without this function I won't be able to tell if the server's running!
-app.listen(3000, () => {
-    console.log('Server is running...')
+//This code creates a 'chat' page.
+app.get('/trips/chat', (re,res) => {
+    res.sendFile(__dirname + '/chat.mustache')
+})
+
+//
+http.listen(3000, () => {
+    console.log('http is listening...')
 })
