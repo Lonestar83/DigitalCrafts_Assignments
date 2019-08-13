@@ -1,0 +1,16 @@
+<html>
+    <body>
+        {{#blogposts}}
+            <form action="/delete-post" method="POST">
+                <form action="update-post" method="POST">
+                    {{title}}
+                    {{entry}}
+                    <button>Update</button>
+                </form>
+                {{datecreated}}
+                <input type="hidden" name="postDelete" value="{{title}}"/>
+                <button>Delete</button>
+            </form>
+        {{/blogposts}}
+    </body>
+</html>
