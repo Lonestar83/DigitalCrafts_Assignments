@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <head>
+            {{> menu}}
+        </head>
+        <form action="/auth/add-post" method="POST">
+            <input type="text" name="postTitle" placeholder="Enter post title"/>
+            <input type="text" name="postEntry" placeholder="Type blog entry"/>
+            <button>Save</button>
+        </form>
+    </body>
+</html>

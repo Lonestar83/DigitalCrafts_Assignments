@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <head>
+            {{> menu}}
+        </head>
+        {{#postid}}
+            <form action="/auth/delete-post" method="POST">
+                {{title}}
+                {{entry}}
+                {{datecreated}}
+                <input type="hidden" name="postDelete" value="{{title}}"/>
+                <button>Delete</button>
+            </form>
+        {{/postid}}
+    </body>
+</html>
