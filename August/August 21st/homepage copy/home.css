@@ -1,0 +1,162 @@
+body {
+    background-color: #3A1F5D;
+    margin: 0%;
+}
+
+header {
+    background-color: #C83660;
+    color: #F6D365;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+}
+
+header span {
+    margin-left: 10px;
+    font-size: 2rem;
+    font-family: 'Playball', cursive;
+}
+
+#search {
+    width: 40%;
+    min-width: 20rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchTerm {
+    width: 90%;
+    border: 3px solid #F6D365;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+  
+.searchTerm:focus{
+    color: #F6D365;
+}
+  
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #F6D365;
+    background: #F6D365;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header button {
+    background-color:  #C83660;
+    color: #F6D365;
+    border: 2px solid #F6D365;
+    border-radius: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2rem;
+}
+
+header button:hover {
+    background-color: #F6D365;
+    color: #C83660;
+}
+
+#vendorContainer {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.vendor {
+    background-color: #E15249;
+    width: 90%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+}
+
+img {
+    border: 1px solid  #F6D365;
+}
+
+.vendorInfo {
+    width: 100%;
+    color: #F6D365;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    background-image: linear-gradient(to right, transparent, #F6D365, transparent);
+    border: 0;
+    height: 1px;
+    width: 100%
+}
+
+.vendorName {
+    text-align: center;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #E15249;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F6D365;
+    font-size: 3rem;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+header {
+    height: auto;
+    flex-direction: column;
+}
+
+header span {
+    font-size: 4rem;
+}
+
+#search {
+    width: 100%;
+}
+
+.searchTerm {
+    border-radius: 0px;
+}
+
+.searchButton {
+    border-radius: 0px;
+}
+
+#vendorContainer {
+    justify-content: flex-start;
+    background: url("purplebaseball.png") no-repeat center center fixed; 
+}
+}
