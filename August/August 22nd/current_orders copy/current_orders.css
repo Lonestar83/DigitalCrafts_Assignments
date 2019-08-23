@@ -1,0 +1,169 @@
+body {
+    background-color: #17223B;
+    margin: 0%;
+}
+
+header {
+    background-color: #FF6768;
+    color: #263859;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+}
+
+header span {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+#orderContainer {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.order {
+    background-color: #6B778D;
+    width: 80%;
+    max-width: 200rem;
+    height: 15rem;
+    min-height: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+    color: #263859;
+    font-size: 2rem;
+    font-family: 'M PLUS Rounded 1c';
+}
+
+.orderInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+#orderTotal {
+    background-color: #6B778D;
+    width: 80%;
+    max-width: 200rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 2px;
+    color: #263859;
+    font-size: 2rem;
+    font-family: 'M PLUS Rounded 1c';
+}
+
+img {
+    height: 100%;
+    width: 25%;
+    min-width: 10rem;
+}
+
+footer {
+    background-color: #FF6768;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #263859;
+    font-size: 3rem;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+header {
+    height: auto;
+    flex-direction: column;
+    text-justify: center;
+}
+
+header span {
+    font-size: 4rem;
+}
+
+#orderContainer {
+    justify-content: flex-start;
+}
+
+#pageTitle {
+    font-size: 10vw;
+}
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+header {
+    height: auto;
+    flex-direction: column;
+}
+
+header span {
+    font-size: 4rem;
+}
+
+img {
+    height: 5rem;
+    width: 5rem;
+    min-width: 0%;
+}
+
+#orderContainer {
+    justify-content: flex-start;
+    height: 60%;
+}
+
+.order {
+    background-color: #6B778D;
+    width: 80%;
+    height: auto;
+    min-height: 0%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+}
+
+.orderInfo {
+    font-size: 1rem;
+    justify-content: center;
+}
+
+.orderInfo br {
+    height: 1rem;
+}
+
+#order {
+    background-color: #6B778D;
+    width: 90%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+}
+}
