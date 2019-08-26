@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+html {
+  font-family: "Verela Round", sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: -1.25rem;
+}
+
+.opacity span:nth-child(1) {
+  color: rgba(171, 23, 149, 0.75);
+}
+
+/*# sourceMappingURL=blended.css.map */
