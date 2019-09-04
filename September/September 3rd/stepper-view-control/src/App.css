@@ -1,0 +1,28 @@
+.incrementor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid black;
+  width: 25vw;
+  height: 10vh;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.incrementor button {
+  background-color: green;
+  width: 30%;
+  font-size: 3rem;
+  color: white;
+}
+
+.decrementButton {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.incrementButton {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

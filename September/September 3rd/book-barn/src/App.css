@@ -1,0 +1,101 @@
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-image: linear-gradient(45deg, #FFCC99, tan);
+}
+
+.headerWrapper h1 {
+  margin: 10px;
+  color: #9999ff;
+  text-shadow: 1px 1px gray;
+  font-style: italic;
+}
+
+.headerWrapper a {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.searchBar {
+  margin-left: 30vw;
+  height: 3vh;
+  width: 25vw;
+}
+
+.searchBar input[type=search] {
+  height: 2vh;
+  width: 75%;
+  font-size: 2rem;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.searchBar button {
+  font-size: 1rem;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.booksContainer {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+
+.singleBook {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  width: 20vw;
+  height: auto;
+  max-width: 150px;
+  max-height: 350px;
+  margin: 10px;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.singleBook img {
+  height: auto;
+  width: 100%;
+}
+
+.bookTitle {
+  background: ghostwhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 5vh;
+}
+
+.bookButton {
+  background: green;
+  color: white;
+  font-size: 2rem;
+  width: 100%;
+  height: 5vh;
+  max-height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0%;
+  border: 0px;
+  position: absolute;
+  bottom: 0%;
+}
