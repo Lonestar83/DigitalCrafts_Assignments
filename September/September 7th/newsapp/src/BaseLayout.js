@@ -5,6 +5,9 @@ class Menu extends Component {
     render() {
         return <header className="header">
                     React NewsApp!
+                    <br/>
+                    <input type="text"/>
+                    <button type="search">Search</button>
                 </header>
     }
 }

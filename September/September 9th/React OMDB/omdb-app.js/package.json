@@ -1,14 +1,11 @@
 {
-  "name": "react-hooks-videoplayer-start",
+  "name": "omdb-app.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-player": "^1.12.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "styled-components": "^4.3.2"
+    "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

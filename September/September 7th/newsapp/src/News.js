@@ -11,7 +11,7 @@ export class NewsDetails extends Component {
     }
 
     getNews() {
-        fetch("https://newsapi.org/v2/everything?q=dog&from=2019-08-07&sortBy=publishedAt&apiKey=6a31f92e8a4b4d0185f5cc0571be3666")
+        fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=6a31f92e8a4b4d0185f5cc0571be3666")
             .then(promise => promise.json())
             .then(json => {
                 console.log('Success!')
@@ -32,7 +32,7 @@ export class NewsDetails extends Component {
             <div className="newsItem" key={index}>
                 <img src={newsItem.urlToImage ? newsItem.urlToImage : photo} alt={newsItem.title}/>
                 <h3>{newsItem.title}</h3>
-                <span>Author: {newsItem.author}</span>
+                <h5>Author: {newsItem.author ? newsItem.author : "Unknown"}</h5>
                 <span>Description: {newsItem.description}</span>
             </div>
         )
