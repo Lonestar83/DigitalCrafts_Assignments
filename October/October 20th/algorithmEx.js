@@ -15,7 +15,7 @@ function smallestCommons(arr) {
         for(let i = 2; i <= num; i++) {
             let divArray = []
             if(num % i === 0) {
-                divArray.append(i)
+                divArray.push(i)
             }
             return divArray
         }
@@ -34,3 +34,15 @@ function smallestCommons(arr) {
 }
 
 console.log(smallestCommons([14, 72]))
+
+function uniteUnique(arr) {
+    let newArr=[]
+        for(let i = 0; i < arr.length; i++) {
+            for(let j = 0; j < arr[i].length; j++) {
+                if(!newArr.includes(arr[i][j])) {
+                    newArr.push(arr[i][j])
+                }
+            }
+        }
+    return newArr
+}
