@@ -69,3 +69,18 @@ function maxChar(str) {
 
     return maxChar;
 }
+
+function anagramCheck(str1, str2) {
+    let aString = cleanString(str1);
+    let bString = cleanString(str2);
+
+    if(aString === bString) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function cleanString(str) {
+    return str.replace(/[^\w]/g,'').split().sort().join()
+}
