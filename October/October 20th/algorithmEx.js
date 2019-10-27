@@ -84,3 +84,8 @@ function anagramCheck(str1, str2) {
 function cleanString(str) {
     return str.replace(/[^\w]/g,'').split().sort().join()
 }
+
+function vowels(str) {
+    const matches = str.match(/[aeious]/gi);
+    return matches ? matches.length : 0
+}
