@@ -152,3 +152,16 @@ function maxChar(str) {
 
     console.log(charMap)
 }
+
+var arr = [1,2,3,4]
+var reversedArr = reverseArray(arr);
+
+function reverseArray(arr) {
+    var newArr = [];
+    console.log(newArr);
+    if(!arr.length) {
+       return newArr;
+    } else {
+        return newArr.concat(reverseArray(arr.slice(1)), arr[0]);
+    }
+}
