@@ -1,3 +1,5 @@
+import { isPrivateName } from "@babel/types";
+
 function sumAll(x,y) {
     let min = Math.min(x,y)
     let max = Math.max(x,y)
@@ -187,3 +189,23 @@ var caesarShift = function(str, amount) {
 	}
 	return output;
 };
+
+function sumPrimes(num) {
+    let total = 0;
+    for (let j = 1; j <= num; j++) {
+        if (isPrime(j)) {
+            total += j;
+        }
+    }
+    return total;
+}
+
+function isPrime(number) {
+    let prime = true;
+    for (let i = 2; i < Math.floor(Math.sqrt(number)); i++) {
+        if (number % i === 0) {
+            return prime = false;
+        }
+    }
+    return prime;
+}
