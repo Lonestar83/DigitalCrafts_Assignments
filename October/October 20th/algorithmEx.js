@@ -209,3 +209,22 @@ function isPrime(number) {
     }
     return prime;
 }
+
+const largestPrime = num => {
+    let primes = []
+    function primeFinder(x) {
+        let isPrime = true;
+        for (let i = 2; i < Math.floor(Math.sqrt(x)); i++) {
+            if (x % i === 0) {
+                return isPrime = false;
+            }
+        }
+        return isPrime;
+    }
+    for (let j = 1; j < num; j++) {
+        if(primeFinder(j)) {
+            primes.push(j)
+        }
+    }
+    return (primes[primes.length -1])
+}
