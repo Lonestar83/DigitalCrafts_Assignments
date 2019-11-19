@@ -254,3 +254,5 @@ function arrayOfMultipes(num, length) {
     }
     return array
 }
+
+let a = Maath.pow
