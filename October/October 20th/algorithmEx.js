@@ -274,3 +274,137 @@ function permut(string) {
     }
     return permutations;
 }
+
+function Node(data) { 
+    this.node = data; 
+    this.next = null; 
+} 
+
+function LinkedList(list) { 
+    this.head = list || null
+} 
+
+LinkedList.prototype.insert = function(data) { 
+      if (this.head === null) 
+          this.head = new Node(data); 
+      else { 
+          let list = this.head; 
+          while (list.next) { 
+              list = list.next; 
+          } 
+          list.next = new Node(data) 
+      } 
+} 
+
+LinkedList.prototype.iterate = function() { 
+      if (this.head === null) 
+          return null; 
+
+      let list = this.head; 
+
+      while (list) { 
+          document.write(list.node)  
+          if (list.next) 
+              document.write(' -> ') 
+          list = list.next 
+      } 
+} 
+
+LinkedList.prototype.mergeSort = function(list) { 
+      if (list.next === null) 
+          return list; 
+
+      let count = 0; 
+      let countList = list 
+      let leftPart = list; 
+      let leftPointer = list; 
+      let rightPart = null; 
+      let rightPointer = null; 
+
+      while (countList.next !== null) { 
+          count++; 
+          countList = countList.next; 
+      } 
+
+      let mid = Math.floor(count / 2) 
+      let count2 = 0; 
+
+      while (count2 < mid) { 
+          count2++; 
+          leftPointer = leftPointer.next; 
+      } 
+
+      rightPart = new LinkedList(leftPointer.next); 
+      leftPointer.next = null; 
+
+      return this._mergeSort(this.mergeSort(leftPart), 
+                             this.mergeSort(rightPart.head)) 
+} 
+
+LinkedList.prototype._mergeSort = function(left, right) { 
+ 
+      let result = new LinkedList() 
+
+      let resultPointer = result.head; 
+      let pointerLeft = left; 
+      let pointerRight = right; 
+
+        
+      // If true then add left most node value in result, 
+      // increment left pointer else do the same in 
+      // right linked list. 
+      // This loop will be executed until pointer's of 
+     // a left node or right node reached null 
+      while (pointerLeft && pointerRight) { 
+          let tempNode = null; 
+
+         // Check if the right node's value is greater than 
+         // left node's value 
+          if (pointerLeft.node > pointerRight.node) { 
+              tempNode = pointerRight.node 
+              pointerRight = pointerRight.next; 
+          } 
+          else { 
+              tempNode = pointerLeft.node 
+              pointerLeft = pointerLeft.next; 
+          } 
+
+          if (result.head == null) { 
+              result.head = new Node(tempNode) 
+              resultPointer = result.head 
+          } 
+          else { 
+              resultPointer.next = new Node(tempNode) 
+              resultPointer = resultPointer.next 
+          } 
+      } 
+
+      // Add the remaining elements in the last of resultant 
+      // linked list 
+      resultPointer.next = pointerLeft; 
+      while (resultPointer.next) 
+          resultPointer = resultPointer.next 
+
+          resultPointer.next = pointerRight 
+
+      // Result is  the new sorted linked list 
+       return result.head; 
+} 
+
+// Initialize the object 
+let l = new LinkedList(); 
+l.insert(10) 
+l.insert(20) 
+l.insert(3) 
+l.insert(2) 
+l.insert(1) 
+// Print the linked list 
+l.iterate() 
+
+// Sort the linked list 
+l.head = LinkedList.prototype.mergeSort(l.head) 
+
+document.write('<br> After sorting : '); 
+
+// Print the sorted linked list 
+l.iterate() 
