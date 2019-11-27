@@ -430,3 +430,17 @@ function bubble_Sort(a)
     } while (swapp);
  return x; 
 }
+
+function capitalize(str) {
+    if(typeof str == string) {
+        var newString;
+        var arr = str.split();
+        for(let i = 0; i < arr.length; i++) {
+            let cap = arr[i].charAt(0).toUpperCase + arr[i].slice(1, arr[i].length)
+            newString.push(cap);
+        }
+        return newString.join(' ');
+    } else {
+        return;
+    }
+}
