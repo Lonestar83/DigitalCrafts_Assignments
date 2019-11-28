@@ -444,3 +444,13 @@ function capitalize(str) {
         return;
     }
 }
+
+function toArray(obj) {
+    var arr;
+    var key = Object.keys(arr);
+    var val = Object.values(arr);
+    for(let i in obj) {
+        arr.push([key[i], val[i]])
+    }
+    return arr;
+}
