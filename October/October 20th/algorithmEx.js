@@ -519,3 +519,7 @@ var gen = idMaker();
 console.log(gen.next().value);
 console.log(gen.next().value);
 console.log(gen.next().value);
+
+function stripVowels(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
