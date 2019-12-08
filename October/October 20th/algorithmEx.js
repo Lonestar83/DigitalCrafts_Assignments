@@ -523,3 +523,8 @@ console.log(gen.next().value);
 function stripVowels(str) {
     return str.replace(/[aeiou]/gi, '');
 }
+
+function filterNegatives(arr) {
+    arr = arr.filter((x) => { return x > -1});
+    return arr;
+}
