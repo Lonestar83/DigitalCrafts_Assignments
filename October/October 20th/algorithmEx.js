@@ -528,3 +528,7 @@ function filterNegatives(arr) {
     arr = arr.filter((x) => { return x > -1});
     return arr;
 }
+
+function squareDigits(num) {
+    return Number(('' + num).split('').map(function(val) {return val * val;}).join(''));
+}
