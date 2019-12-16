@@ -589,3 +589,16 @@ function duplicateEncode(word){
         })
         .join('');
 }
+
+function order(words) {
+    var arr = words.split(' ');
+    var newArr = [];
+    for(let i = 1; i <= arr.length; i++) {
+        for(let j = 0; j < arr.length; j++) {
+            if(arr[j].indexOf(i.toString()) != -1) {
+                newArr.push(arr[j]);
+            }
+        }
+    }
+    return newArr.join(' ');
+}
