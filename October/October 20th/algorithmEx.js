@@ -615,3 +615,20 @@ function isPrime(num) {
     }
     return isPrime = true;
 }
+
+function high(x){
+    var arr = x.split(' ');
+    var min = 0;
+    var word = "";
+    for(let i = 0; i < arr.length; i++) {
+        var total = 0;
+        for(let j = 0; j < arr[i].length; j++) {
+            total += arr[i].charCodeAt(j) - 96;
+        }
+        if(total > min) {
+            min = total;
+            word = arr[i]
+        }
+    }
+    return word;
+}
