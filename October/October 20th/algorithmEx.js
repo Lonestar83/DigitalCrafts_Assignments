@@ -632,3 +632,25 @@ function high(x){
     }
     return word;
 }
+
+function sqInRect(lng, wdth) {
+    var newArr= [];
+    if(lng == wdth) {
+        return null;
+    }
+    while(lng > 0 && wdth > 0) {
+        if(lng == wdth) {
+            newArr.push(lng);
+            lng = 0;
+        } else {
+            if(Math.max(lng, wdth) == lng) {
+                newArr.push(wdth);
+                lng -= wdth;
+            } else {
+                newArr.push(lng);
+                wdth -= lng;
+            }
+        }
+    }
+    return newArr;
+}
