@@ -660,3 +660,10 @@ String.prototype.camelCase=function(){
         return word.charAt(0).toUpperCase() + word.slice(1)
     }).join('')
 }
+
+function pigIt(str){
+    return str.split(' ').map(function(word){
+        var rest = word.match(/^[.,:!?;]/) ? word[0] : word[0] + 'ay';
+        return word.slice(1) + rest;
+    }).join(' ')
+}
