@@ -674,3 +674,12 @@ function digital_root(n) {
     }
     return n;
 }
+
+function generateHashtag (str) {
+    str = str.split(' ').map(word => {return word.charAt(0).toUpperCase() + word.slice(1)}).join('');
+    if(str.length + 1 > 140 || str == "") {
+        return false;
+    } else {
+        return '#' + str;
+    }
+}
