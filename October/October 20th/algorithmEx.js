@@ -703,3 +703,27 @@ function validParentheses(parens) {
     }
     return n == 0;
 }
+
+function validate(password) {
+    return /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?![!@#\$%\^&](?=.{6,}))/.test(password);
+}
+
+var maxSequence = function(arr) {
+    var min = 0, ans = 0, i, sum = 0;
+    for (i = 0; i < arr.length; i++) {
+        sum += arr[i]
+        min = Math.min(sum, min)
+        ans = Math.max(ans, sum - min);
+    }
+    return ans;
+}
+
+function josephusSurvivor(n,k) {
+    var people = [], p = 0;
+    for (var i = 0; i < n; i++) {people.push(i+1);}
+    while(people.length > 1) {
+        p = (p + k - 1) % people.length;
+        people.splice(p,1);
+    }
+    return people.pop();
+}
