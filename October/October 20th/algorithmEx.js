@@ -733,3 +733,21 @@ function rot13(str) {
         return String.fromCharCode(x.charCodeAt(0) + (x.toLowerCase() <= 'm' ? 13: -13));
     })
 }
+
+function convertFrac(lst) {
+    var d=[]; lst.forEach((cv) => d.push(cv[1]));
+    var max=d.sort()[d.length-1];
+    var mul=0;
+    var done=false;
+    while(!done){
+        mul++;
+        done=true;
+        var t=max*mul;
+        for(var x=0; x<d.length && done; x++) {
+            if((max*mul)%d[x] !== 0)
+                done=false;
+        }
+    }
+    var r=""; lst.forEach((cv)=>r+="("+(cv[0]*max*mul)/cv[1] + ","+,ax*mul+")");
+    return r;
+}
