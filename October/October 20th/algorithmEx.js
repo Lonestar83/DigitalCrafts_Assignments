@@ -778,3 +778,17 @@ function isSolved(board) {
     if(/0/.test(board)) return -1;
     return 0;
 }
+
+function solution(input, markers) {
+    var arr= input.split(' ')
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < markers.length; j++) {
+            if(arr[i] == markers[j]) {
+                arr[i].splice(i, 2);
+            } else if (arr[i].charAt(0) == markers[j]) {
+                arr[i].splice(i, 1);
+            }
+        }
+    }
+    return arr;
+}
