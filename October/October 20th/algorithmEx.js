@@ -796,3 +796,10 @@ function solution(input, markers) {
 function alphanumeric(string) {
     return /^[0-9a-z]+$/i.test(string);
 }
+
+function sum(a, b) {
+    function Number(x) {
+        return parseFloat(x)
+    }
+    return (Number(a) + Number(b)).toString();
+}
