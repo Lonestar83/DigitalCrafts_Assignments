@@ -813,3 +813,10 @@ function toHex(d) {
     if(d > 255) {return "FF";}
     return ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
 }
+
+function domaninName(url) {
+    url = url.rplace("https://", '');
+    url = url.rplace("http://", '');
+    url = url.replace("www.", '');
+    return url.split('.')[0];
+}
