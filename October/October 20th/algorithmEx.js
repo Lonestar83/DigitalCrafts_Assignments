@@ -846,3 +846,13 @@ function listSquared(m, n) {
     };
     return arr;
   }
+
+  var flapDisplay = function(lines, rotors) {
+      return lines.map(function(x,i){
+          var tmp = 0;
+          return x.split('').map(function(y,j){
+              tmp += rotors[i][j];
+              return ALPHABET[(ALPHABET.indexOF(y) + tmp)%54];
+          }).join('');
+      })
+  }
