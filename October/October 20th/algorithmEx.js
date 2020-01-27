@@ -870,3 +870,7 @@ function listSquared(m, n) {
           }
       }
   }
+
+  function toUnderscore(string) {
+      return (''+string).replace(/[A-Z]/g, (c,i) => i ==0 ? c.toLowerCase() : '_'+c.toLowerCase());
+  }
