@@ -912,3 +912,12 @@ function listSquared(m, n) {
       if(b == '') b = '0';
       return (parseInt(a) + parseInt(b)).toString();
   }
+
+  var lastDigit = function(str1, str2){
+      if ("0" === str2){
+          return(1);
+      }
+      let x = parseInt(str1[str1.length - 1]);
+      let y = parseInt(str2.substr(-2)) % 4;
+      return(Math.pow(x, y ? y : 4) % 10);
+  }
