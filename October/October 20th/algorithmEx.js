@@ -921,3 +921,8 @@ function listSquared(m, n) {
       let y = parseInt(str2.substr(-2)) % 4;
       return(Math.pow(x, y ? y : 4) % 10);
   }
+
+  function anagrams(word, words) {
+      word = word.split('').sort().join('');
+      return words.filter(function(v) {return word == v.split('').sort().join('');});
+  }
