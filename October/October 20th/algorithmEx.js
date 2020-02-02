@@ -926,3 +926,14 @@ function listSquared(m, n) {
       word = word.split('').sort().join('');
       return words.filter(function(v) {return word == v.split('').sort().join('');});
   }
+
+  function ipsBetween(start, end){
+      return ipToInt32(end) - ipToInt32(start);
+  }
+
+  function ipToInt32(ip){
+      return parseInt(ip.split('.').map(function(v) {
+          var bin = parseInt(v).toString(2);
+          return new Array(9 - bin.length).join('0') + bin;
+      }).join(''), 2);
+  }
