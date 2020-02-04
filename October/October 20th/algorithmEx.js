@@ -937,3 +937,19 @@ function listSquared(m, n) {
           return new Array(9 - bin.length).join('0') + bin;
       }).join(''), 2);
   }
+
+  function properFractions(n) {
+      var count = 0;
+      var list = [];
+      if(n == 1) return 0;
+      for(let i = 1; i < n; i++) {
+          if(n %i == 0) {
+              list.push(i)
+              for(let j = 1; j < i; j++) {
+                  if(i % j) {
+                      list.push(j)
+                  }
+              }
+          }
+      }
+  }
