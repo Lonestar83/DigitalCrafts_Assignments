@@ -953,3 +953,11 @@ function listSquared(m, n) {
           }
       }
   }
+
+  var solution = function(firstArray, secondArray) {
+      var total =0;
+      for(let i = 0; i < firstArray.length; i++) {
+          total += Math.pow(Math.abs(firstArray[i] - secondArray[i]), 2)
+      }
+      return total/firstArray.length;
+  }
