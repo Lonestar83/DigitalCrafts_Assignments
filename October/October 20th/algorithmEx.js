@@ -960,4 +960,16 @@ function listSquared(m, n) {
           total += Math.pow(Math.abs(firstArray[i] - secondArray[i]), 2)
       }
       return total/firstArray.length;
+}
+
+function findUniq(arr) {
+    let alphabet = word => [...new Set(word.toLowerCase())]
+        .sort()
+        .join("")
+        .trim();
+    let alphabet0 = alphabet(arr[0]);
+    let alphabet1 = alphabet(arr[1]);
+    if(alphabet0 === alphabet1) return arr.find(word => alphabet(word) !== alphabet0);
+    if(alphabet0 === alphabet(arr[2])) return arr[1];
+    return arr[0];
   }
