@@ -972,4 +972,37 @@ function findUniq(arr) {
     if(alphabet0 === alphabet1) return arr.find(word => alphabet(word) !== alphabet0);
     if(alphabet0 === alphabet(arr[2])) return arr[1];
     return arr[0];
-  }
+}
+
+function formatDuration (seconds) {
+    if(seconds == 0) {
+        return "now";
+    } else {
+        var years = 0;
+        var days = 0;
+        var hours = 0;
+        var minutes = 0;
+        var secs = 0;
+        while(seconds > 31536000) {
+            years++;
+            seconds -= 31536000;
+        }
+        while(seconds > 86400) {
+            days++;
+            seconds -= 86400;
+        }
+        while(seconds > 3600) {
+            hours++;
+            seconds -= 3600;
+        }
+        while(seconds > 60) {
+            minutes++;
+            seconds -= 60;
+        }
+        while(seconds > 0) {
+            secs++;
+            seconds--;
+        }
+        return [years, days, hours, minutes, secs];
+    }
+}
