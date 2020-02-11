@@ -1010,3 +1010,17 @@ function formatDuration (seconds) {
 function validate(password) {
     return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/.test(password)
 }
+
+var beermid = function(bonus, price) {
+    var total = 0;
+    var level = 0;
+    while(bonus > 0) {
+        level++;
+        if(bonus - (Math.pow(level, 2) * price) < 0) {
+            return level - 1;
+        }
+        total += Math.pow(level, 2);
+        bonus -= Math.pow(level, 2) * price;
+    }
+    return level;
+}
