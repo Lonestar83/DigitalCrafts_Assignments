@@ -1024,3 +1024,17 @@ var beermid = function(bonus, price) {
     }
     return level;
 }
+
+const flatten = (...arr) => {
+    let i = 0;
+
+    while (i <arr.length) {
+        if (Array.isArray(arr[i])) {
+            arr.splice(i,1, ...arr[i]);
+        } else {
+            i++;
+        }
+    }
+    
+    return arr;
+}
