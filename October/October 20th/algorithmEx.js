@@ -1053,3 +1053,17 @@ function firstNonRepeatingLetter(s) {
             return s[x];
     return "";
 }
+
+function CaesarCipher(shift) {
+    function translate(offset) {
+        return function(string) {
+            return string.toUpperCase().replace(/[A-Z]/g, function(letter) {
+                return String.fromCharCode(65 + (13 + letter.charCodeAt() + offset) % 26);
+            })
+        };
+    }
+    return {
+        encode: translate(shift),
+        decode: translate(-shift)
+    };
+}
