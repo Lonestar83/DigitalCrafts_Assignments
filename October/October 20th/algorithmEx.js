@@ -1067,3 +1067,15 @@ function CaesarCipher(shift) {
         decode: translate(-shift)
     };
 }
+
+function findOccurence(X, Y, V) {
+    var counter = 0;
+    for(let i = 0; i <= V; i++) {
+        for(let j = 0; j <= Math.sqrt(V); j++) {
+            if(i + Math.pow(j,2) == V) {
+                counter++;
+            }
+        }
+    }
+    return counter;
+}
